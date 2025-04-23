@@ -1,0 +1,9 @@
+docker --version
+docker login
+docker images
+docker ps
+docker build -t sample-web-app .
+docker run -p 3000:3000 sample-web-app
+docker kill container_name
+docker stop container_name
+
