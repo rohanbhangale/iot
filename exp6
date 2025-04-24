@@ -1,0 +1,6 @@
+kubectl run mypod --image=nginx
+
+kubectl get pod mypod -o wide
+
+kubectl logs mypod
+
