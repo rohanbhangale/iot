@@ -1,0 +1,11 @@
+kubeadm init
+
+export KUBECONFIG=$HOME/.kube/config
+
+kubectl get nodes
+
+kubectl token create --print-join-command
+
+paste the token
+
+kubectl get nodes
