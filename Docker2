@@ -1,0 +1,8 @@
+# Step 1: Pull the image from Docker Hub
+docker pull nginx
+
+# Step 2: Create and run a container from it
+docker run -d -p 8080:80 --name my-nginx nginx
+
+# Step 3: Stop the container
+docker stop my-nginx
