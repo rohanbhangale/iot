@@ -9,3 +9,18 @@ kubectl token create --print-join-command
 paste the token
 
 kubectl get nodes
+
+kubectl get nodes
+
+kubectl get pods
+
+kubectl cluster-info
+
+kubectl version
+
+kubectl api-resources
+
+kubectl get secrets
+
+kubectl get events
+kubectl get service
