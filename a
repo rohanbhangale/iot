@@ -28,3 +28,25 @@ public class ProducerConsumer{
             }
         }
     }
+    
+    static class Consumer extends Thread {
+        public void run(){
+            try{
+                full.acquire();
+                mutex.acquire();
+                int item = buffer[out];
+                System.out.println("Consuemed " + item);                  
+                out =  ( out + 1) % buffer.length;
+                empty.release();
+                mutex.release();
+            }catch(InterruptedException e){
+                System.out.println("Error Occurred" + e);
+            }
+        }
+    }
+    
+public static void main(String args[]){
+    new Producer().start();
+    new Consumer().start();
+    }
+}
